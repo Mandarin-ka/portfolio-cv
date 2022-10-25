@@ -313,10 +313,6 @@ main{
     position: relative;
 }
 
-#projects .section-name{
-    
-}
-
 #projects .section-name::before{
     width: 45%;
     height: 5px;
