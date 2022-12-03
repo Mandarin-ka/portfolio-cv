@@ -20,14 +20,14 @@ header{
 }
 
 h1{
-    font-size: 96px;
+    font-size: 42px;
     font-weight: 400;
     color: white;
     text-align: right;
 }
 
 h2{
-    font-size: 48px;
+    font-size: 36px;
     color: #7A966D;
     text-align: right;
 }
@@ -42,13 +42,15 @@ h2{
 
 .header-description{
     height: 180px;
+    width: 70%;
     transform: translate(0, 20%);
 }
 
 .photo{
     margin: 35px 0 0;
-    max-width: 450px;
-    width: 100%;
+    width: fit-content;
+    object-fit: contain;
+    max-height: 400px;
 }
 
 #education{
@@ -82,7 +84,6 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 450px;
     margin-left: 10px;
 }
 
@@ -177,8 +178,8 @@ main{
 }
 
 #personal-information ul{
-    margin-top: 60px;
-    height: 265px;
+    margin-top: 40px;
+    height: 205px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -192,60 +193,6 @@ main{
 .answer{
     font-size: 32px;
     margin-left: 15px;
-}
-
-#english-level{
-    position: relative;
-    margin: 0;
-    margin-top: 100px;
-    max-width: 774px;
-}
-
-#english-level .section-name{
-    margin-top: 0;
-    margin: 0;
-}
-
-
-#english-level .section-name::before{
-    display: none;
-}
-
-#english-level .section-name::after{
-    content: '';
-    display: block;
-    position: absolute;
-    border-top: 2px dashed #343434;
-    width: 80%;
-    right: -20%; top: 28px;bottom: 0;
-    text-align: center;
-}
-
-.eng{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 60px;
-}
-
-.block{
-    width: 480px;
-    border-radius: 5px;
-    height: 60px;
-    background-color: #D9D9D9;
-    border: 1px solid #313131;
-}
-
-.block-bar{
-    width: 50%;
-    height: 60px;
-    background-color: #656565;
-    border-radius: 0 20px 20px 0;
-}
-
-.english-lvl-text{
-    margin-left: 35px;
-    width: 290px;
-    font-size: 24px;
 }
 
 #contacts{
@@ -281,7 +228,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 480px;
+    max-width: 420px;
     margin-top: 40px;;
 }
 
@@ -314,7 +261,7 @@ main{
 }
 
 #projects .section-name::before{
-    width: 45%;
+    width: 35%;
     height: 5px;
 }
 
@@ -323,24 +270,25 @@ main{
     display: block;
     position: absolute;
     border-top: 2px dashed #343434;
-    width: 45%;
+    width: 35%;
     right: 0%; top: 28px;bottom: 0;
     text-align: center;
     height: 5px;
 }
 
 .project-items{
-    width: 1500px;
+    max-width: 1400px;
     margin: 80px auto;
     display: flex;
     justify-content: space-between;
 }
 
 .project-item{
-    width: 400px;
+    width: 600px;
     height: 160px;
     background-color: #D9D9D9;
     display: flex;
+    margin: 0 20px;
 }
 
 .task-position .date{
@@ -363,4 +311,257 @@ main{
 .task-description{
     margin-top: 10px;
     color: #343434;
+}
+
+@media screen and (max-width:1340px) {
+    .header-container{
+        max-width: 900px;
+    }
+
+    .header-description{
+        max-width: 600px;
+    }
+
+    #personal-information{
+        margin: 270px 0 0;
+    }
+
+    #contacts{
+        margin: 70px 0 0;
+    }
+
+    #contacts .section-name::after{
+        width: 30%;
+    }
+
+    .project-item{
+        width: 450px;
+        height: 250px;
+    }
+
+    .project-item img{
+        max-width: 200px;
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width:1160px) {
+    main{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .section-name::before,
+    .section-name::after{
+        display: none;
+    }
+
+    .left-block{
+        margin-top: 0px;
+    }
+
+    #education{
+        margin-top: 0;
+    }
+
+    #personal-information{
+        margin-top: 240px;
+    }
+
+    #contacts .section-name::after{
+        display: none;
+    }
+
+    #projects .section-name::after{
+        display: none;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .project-items{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .project-item{
+        margin-top: 20px;
+    }
+
+    .header-description{
+        max-width: 400px;
+    }
+
+    .header-container{
+        max-width: 700px;
+    }
+
+    .section-name::after{
+        display: none !important;
+    }
+
+    .right-block{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #contacts .section-name{
+        margin: auto;
+    }
+    
+    .section-name{
+        text-align: center;
+    }
+
+    header{
+        height: 320px;
+    }
+
+    #skills{
+        padding: 0;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills .section-name{
+        margin: 0;
+    }
+
+    #skills li{
+        text-align: left;
+        margin: 15px 0;
+    }
+}
+
+@media screen and (max-width:730px) {
+    .education-list-item{
+        max-width: 420px;
+    }
+
+    .education-position{
+        max-width: 240px;
+        font-size: 28px;
+    }
+
+    .specialization{
+        font-size: 26px;
+        max-width: 160px;
+    }
+
+    header{
+        height: 700px;
+    }
+
+    .header-container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: fit-content;
+    }
+
+    .header-description{
+        height: fit-content;
+    }
+
+    h1, h2{
+        text-align: center;
+    }
+
+    h1{
+        font-size: 36px;
+    }
+
+    h2{
+        font-size: 32px;
+        margin-top: 10px;
+    }
+
+    .photo{
+        margin-top: 80px;
+    }
+
+    #personal-information{
+        margin-top: 120px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .project-item{
+        width: calc(100% - 30px);
+        padding: 5px 5px 20px 5px;
+        margin: 10px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+    }
+
+    .project-item img{
+        width: 100%;
+        max-width: none;
+    }
+
+    #projects .section-name{
+        max-width: 300px;
+    }
+
+    #skills ul li{
+        font-size: 24px;
+        max-width: 300px;
+    }
+
+    .left-block{
+        max-width: 300px;
+    }
+
+    .education-list-item{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .date{
+        text-align: left;
+    }
+
+    .education-position{
+        text-align: left;
+    }
+
+    .specialization{
+        margin: 10px 0 0;
+        min-width: 240px
+    }
+
+    .section-name{
+        font-size: 36px;
+    }
+
+    .contacts{
+        max-width: 300px;
+        font-size: 30px;
+        height: 200px;
+    }
+
+    .contacts li,
+    .contacts a{
+        font-size: 26px !important;
+    }
+
+    #personal-information ul{
+        list-style-type: none;
+        max-width: 300px;
+    }
+
+    #personal-information li .pos,
+    #personal-information li .answer{
+        font-size: 26px !important;
+    }
+
+    .left-block .section-name:first-child{
+        margin-top: 20px;
+    }
 }
